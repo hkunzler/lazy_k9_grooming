@@ -1,7 +1,7 @@
 'use client';
 
 import Masonry from 'react-masonry-css';
-import Image from "next/legacy/image";
+import Image from 'next/image';
 import bg from '../assets/bg.png';
 const images = [
     { src: '/dog1.jpg', alt: 'Groomed dog 1' },
@@ -60,6 +60,10 @@ const Gallery = () => {
                     src={bg}
                     alt="Lazy K9 Grooming"
                     className="absolute top-[-30%] left-0 w-full object-contain"
+                    style={{
+                        maxWidth: '100%',
+                        height: 'auto',
+                    }}
                 />
 
                 <div className="relative z-10 flex flex-col justify-center items-center h-screen text-white">
@@ -79,10 +83,14 @@ const Gallery = () => {
                                     src={image.src}
                                     alt={image.alt}
                                     className="rounded-lg shadow-lg"
-                                    layout="responsive"
-                                    objectFit="cover"
                                     width={400}
                                     height={300}
+                                    sizes="100vw"
+                                    style={{
+                                        width: '100%',
+                                        height: 'auto',
+                                        objectFit: 'cover',
+                                    }}
                                 />
                             </div>
                         ))}

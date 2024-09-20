@@ -14,7 +14,7 @@ const config: Config = {
             },
             fontFamily: {
                 heading: ['Poppins', 'sans-serif'],
-		sans: ['K2D', 'sans-serif'],
+                sans: ['K2D', 'sans-serif'],
                 ptSans: ['PT Sans', 'sans-serif'],
                 wendy: ['Wendy One', 'sans-serif'],
             },

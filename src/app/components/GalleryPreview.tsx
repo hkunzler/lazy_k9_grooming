@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/image';
 import { SecondaryButton } from './Buttons';
 
 const images = [
@@ -40,9 +40,13 @@ export default function GalleryPreview() {
                         <Image
                             src={image.src}
                             alt={image.alt}
-                            layout="responsive"
                             width={400}
                             height={300}
+                            sizes="100vw"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }}
                         />
                     </div>
                 ))}

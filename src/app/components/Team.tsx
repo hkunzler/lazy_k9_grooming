@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const Team = () => {
     return (
         <div className="py-16">
@@ -5,10 +7,12 @@ const Team = () => {
                 <h1 className="text-3xl lg:text-6xl text-primary font-bold mb-6">
                     Our Team
                 </h1>
-                <img
+                <Image
                     src="/dog34.jpg"
                     alt="Our Team"
-                    className="w-full h-auto object-contain max-w-7xl "
+                    className="w-full h-auto object-contain max-w-8xl "
+                    width={500}
+                    height={400}
                 />
             </div>
         </div>

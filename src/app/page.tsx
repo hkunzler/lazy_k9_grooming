@@ -3,7 +3,7 @@ import GalleryPreview from './components/GalleryPreview';
 import Product from './components/Product';
 import Services from './components/Services';
 import Team from './components/Team';
-import Image from "next/legacy/image";
+import Image from 'next/image';
 
 const Home = () => {
     return (
@@ -35,11 +35,15 @@ const Home = () => {
                     <div className="lg:w-1/3">
                         <Image
                             src="/dog1.jpg"
-                            layout="responsive"
                             width={400}
                             height={300}
                             className="rounded-lg shadow-lg"
                             alt="Dog Grooming"
+                            sizes="100vw"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }}
                         />
                     </div>
                 </div>
