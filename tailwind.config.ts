@@ -13,7 +13,7 @@ const config: Config = {
                 background: '#E2E2E2',
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'], 
+                sans: ['Inter', 'sans-serif'],
                 heading: ['Poppins', 'sans-serif'],
             },
             spacing: {
@@ -22,7 +22,7 @@ const config: Config = {
                 '96': '24rem',
             },
             borderRadius: {
-                lg: '1.5rem', 
+                lg: '1.5rem',
             },
             fontFamily: {
                 sans: ['K2D', 'sans-serif'],

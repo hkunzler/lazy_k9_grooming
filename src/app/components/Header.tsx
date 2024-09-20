@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import logo from '../assets/logo.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);

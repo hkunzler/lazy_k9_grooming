@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import { SecondaryButton } from './Buttons.tsx';
+import { SecondaryButton } from './Buttons';
 
 const images = [
     { src: '/dog1.jpg', alt: 'Groomed dog 1' },
