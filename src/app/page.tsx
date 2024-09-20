@@ -3,7 +3,7 @@ import GalleryPreview from './components/GalleryPreview';
 import Product from './components/Product';
 import Services from './components/Services';
 import Team from './components/Team';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const Home = () => {
     return (

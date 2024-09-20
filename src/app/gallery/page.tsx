@@ -1,7 +1,7 @@
 'use client';
 
 import Masonry from 'react-masonry-css';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import bg from '../assets/bg.png';
 const images = [
     { src: '/dog1.jpg', alt: 'Groomed dog 1' },
