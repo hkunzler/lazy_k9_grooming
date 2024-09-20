@@ -1,4 +1,4 @@
-import { SecondaryButton } from './Buttons.tsx';
+import { SecondaryButton } from './Buttons';
 
 const Product = () => {
     return (
