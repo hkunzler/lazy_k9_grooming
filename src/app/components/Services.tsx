@@ -1,4 +1,4 @@
-import { PrimaryButton } from './Buttons.tsx';
+import { PrimaryButton } from './Buttons';
 
 const Services = () => {
     return (

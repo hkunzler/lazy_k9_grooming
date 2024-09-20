@@ -37,9 +37,9 @@ export default function RootLayout({
                             <h3 className="text-lg font-bold">Follow Us</h3>
                             <div className="flex space-x-4 mt-4">
                                 <a href="#">
-                                    <span class="sr-only">Facebook</span>
+                                    <span className="sr-only">Facebook</span>
                                     <svg
-                                        class="h-6 w-6"
+                                        className="h-6 w-6"
                                         fill="currentColor"
                                         viewBox="0 0 24 24"
                                     >
@@ -51,9 +51,9 @@ export default function RootLayout({
                                     </svg>
                                 </a>
                                 <a href="#">
-                                    <span class="sr-only">Instagram</span>
+                                    <span className="sr-only">Instagram</span>
                                     <svg
-                                        class="h-6 w-6"
+                                        className="h-6 w-6"
                                         fill="currentColor"
                                         viewBox="0 0 24 24"
                                     >

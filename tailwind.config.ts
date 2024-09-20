@@ -13,8 +13,10 @@ const config: Config = {
                 background: '#E2E2E2',
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
                 heading: ['Poppins', 'sans-serif'],
+		sans: ['K2D', 'sans-serif'],
+                ptSans: ['PT Sans', 'sans-serif'],
+                wendy: ['Wendy One', 'sans-serif'],
             },
             spacing: {
                 '72': '18rem',
@@ -23,11 +25,6 @@ const config: Config = {
             },
             borderRadius: {
                 lg: '1.5rem',
-            },
-            fontFamily: {
-                sans: ['K2D', 'sans-serif'],
-                ptSans: ['PT Sans', 'sans-serif'],
-                wendy: ['Wendy One', 'sans-serif'],
             },
         },
     },
