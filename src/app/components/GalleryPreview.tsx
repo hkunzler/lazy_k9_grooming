@@ -15,22 +15,19 @@ export default function GalleryPreview() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handlePrev = () => {
-        const isFirstSlide = currentIndex === 0;
-        const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
-        setCurrentIndex(newIndex);
+        setCurrentIndex(currentIndex => currentIndex > 0 ? currentIndex - 1 : 0);
     };
 
     const handleNext = () => {
-        const isLastSlide = currentIndex === images.length - 1;
-        const newIndex = isLastSlide ? 0 : currentIndex + 1;
-        setCurrentIndex(newIndex);
+        setCurrentIndex(currentIndex => currentIndex < images.length - 1 ? currentIndex + 1 : currentIndex);
     };
 
+    const maxTransformIndex = images.length - 3;     const transformPercentage = Math.min(currentIndex, maxTransformIndex) * (100 / 3);
     return (
         <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
             <div
                 className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}
+                style={{ transform: `translateX(-${transformPercentage}%)` }}
             >
                 {images.map((image, index) => (
                     <div
