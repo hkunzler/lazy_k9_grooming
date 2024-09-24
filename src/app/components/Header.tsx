@@ -2,8 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import logo from '../assets/logo.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,13 +21,7 @@ const Header = () => {
                             <Link href="/product-info">Product Info</Link>
                         </div>
 
-                        <Link href="/" className="flex justify-center">
-                            <Image
-                                src={logo}
-                                alt="Lazy K9 Logo"
-                                className="h-16 w-fit"
-                            />
-                        </Link>
+                  
 
                         <div className="hidden lg:flex space-x-6 items-center">
                             <Link href="/services">Services</Link>
