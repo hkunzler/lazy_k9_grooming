@@ -1,4 +1,4 @@
-import { PrimaryButton } from './Buttons';
+import { SecondaryButton } from './Buttons';
 
 const Services = () => {
     return (
@@ -31,7 +31,7 @@ const Services = () => {
                 your pets. From shampoos to grooming tools, we ensure the best
                 for your furry friends.
             </p>
-            <PrimaryButton>Contact</PrimaryButton>
+            <SecondaryButton>Services</SecondaryButton>
         </div>
     );
 };

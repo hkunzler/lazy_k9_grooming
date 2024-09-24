@@ -12,15 +12,38 @@ const Header = () => {
 
     return (
         <header>
-            <nav className="sticky top-0 z-10">
+            <nav className="sticky top-0 z-10 ">
                 <div className="max-w-5xl mx-auto p-4">
-                    <div className="flex justify-between font-bold items-center text-white text-3xl">
-                        <Link href="/">Home</Link>
-                        <Link href="/about">About</Link>
-                        <Link href="/product-info">Product Info</Link>
-                        <Link href="/services">Services</Link>
-                        <Link href="/gallery">Gallery</Link>
-                        <Link href="/contact">Contact</Link>
+                    <div className="flex justify-center items-center text-white font-bold text-3xl">
+                        <div className="hidden lg:flex space-x-8 items-center">
+                            <Link className="hover:text-secondary" href="/">
+                                Home
+                            </Link>
+                            <Link
+                                className="hover:text-secondary"
+                                href="/about"
+                            >
+                                About
+                            </Link>
+                            <Link
+                                className="hover:text-secondary"
+                                href="/product-info"
+                            >
+                                Product Info
+                            </Link>
+                            <Link
+                                className="hover:text-secondary"
+                                href="/gallery"
+                            >
+                                Gallery
+                            </Link>
+                            <Link
+                                className="hover:text-secondary"
+                                href="/contact"
+                            >
+                                Contact
+                            </Link>
+                        </div>
 
                         <button
                             onClick={toggleMenu}

@@ -31,7 +31,7 @@ const Product = () => {
                 for your furry friends.
             </p>
             <SecondaryButton>
-                View Services
+                Products 
                 <svg
                     width="25"
                     height="25"
