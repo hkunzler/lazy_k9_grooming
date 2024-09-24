@@ -16,14 +16,13 @@ export default function GalleryPreview() {
 
     const handlePrev = () =>
         setCurrentIndex((currentIndex) =>
-            currentIndex > 0 ? currentIndex - 1 : 0,
+            currentIndex > 0 ? currentIndex - 1 : images.length - 3,
         );
 
-    const handleNext = () => {
+    const handleNext = () =>
         setCurrentIndex((currentIndex) =>
-            currentIndex < images.length - 1 ? currentIndex + 1 : currentIndex,
+            currentIndex + 2 < images.length - 1 ? currentIndex + 1 : 0,
         );
-    };
 
     const maxTransformIndex = images.length - 3;
     const transformPercentage =
