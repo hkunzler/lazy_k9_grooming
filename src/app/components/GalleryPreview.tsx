@@ -14,15 +14,20 @@ const images = [
 export default function GalleryPreview() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const handlePrev = () => {
-        setCurrentIndex(currentIndex => currentIndex > 0 ? currentIndex - 1 : 0);
-    };
+    const handlePrev = () =>
+        setCurrentIndex((currentIndex) =>
+            currentIndex > 0 ? currentIndex - 1 : 0,
+        );
 
     const handleNext = () => {
-        setCurrentIndex(currentIndex => currentIndex < images.length - 1 ? currentIndex + 1 : currentIndex);
+        setCurrentIndex((currentIndex) =>
+            currentIndex < images.length - 1 ? currentIndex + 1 : currentIndex,
+        );
     };
 
-    const maxTransformIndex = images.length - 3;     const transformPercentage = Math.min(currentIndex, maxTransformIndex) * (100 / 3);
+    const maxTransformIndex = images.length - 3;
+    const transformPercentage =
+        Math.min(currentIndex, maxTransformIndex) * (100 / 3);
     return (
         <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
             <div
@@ -70,7 +75,7 @@ export default function GalleryPreview() {
                 </SecondaryButton>
 
                 <div className="flex justify-center space-x-2 mt-4">
-                    {images.map((_, index) => (
+                    {[...Array(images.length - 2)].map((_, index) => (
                         <button
                             key={index}
                             onClick={() => setCurrentIndex(index)}
