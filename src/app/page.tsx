@@ -10,7 +10,7 @@ const Home = () => {
         <div className="mx-auto flex flex-col gap-32">
             <Hero />
             <div className="py-16">
-                <div className="container flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-16">
+                <div className="container flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-16 mx-auto">
                     <div className="container mx-auto flex flex-col lg:w-1/2 ">
                         <div className="p-8">
                             <h2 className="text-xl text-gray-600 font-bold uppercase mb-4">
@@ -34,7 +34,7 @@ const Home = () => {
                     </div>
                     <div className="lg:w-1/3">
                         <Image
-                            src="/dog1.jpg"
+                            src="/dog17.jpg"
                             width={400}
                             height={300}
                             className="rounded-lg shadow-lg"

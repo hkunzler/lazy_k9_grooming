@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { SecondaryButton } from './Buttons';
 
 const images = [
-    { src: '/dog1.jpg', alt: 'Groomed dog 1' },
-    { src: '/dog4.jpg', alt: 'Groomed dog 2' },
-    { src: '/dog5.jpg', alt: 'Groomed dog 3' },
+    { src: '/dog9.jpg', alt: 'Groomed dog 1' },
+    { src: '/dog16.jpg', alt: 'Groomed dog 2' },
+    { src: '/dog13.jpg', alt: 'Groomed dog 3' },
     { src: '/dog9.jpg', alt: 'Groomed dog 4' },
     { src: '/dog10.jpg', alt: 'Groomed dog 5' },
 ];
