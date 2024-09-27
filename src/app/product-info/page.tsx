@@ -94,7 +94,7 @@ const ProductInfo = () => {
                         clogged follicles, and hydrates the skin and coat.”
                     </blockquote>
                 </div>
-                <p>Price is dependent on the dog's size and coat.</p>
+                <p>Price is dependent on the dog&#39;s size and coat.</p>
 
                 <p>
                     For creative grooming, we use only{' '}
