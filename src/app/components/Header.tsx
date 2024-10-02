@@ -52,6 +52,26 @@ const Header = () => {
                                         '0px 2px 4px rgba(255, 255, 255, 0.7)',
                                 }}
                                 className="hover:text-secondary"
+                                href="/prices"
+                            >
+                                Prices
+                            </Link>
+                            <Link
+                                style={{
+                                    textShadow:
+                                        '0px 2px 4px rgba(255, 255, 255, 0.7)',
+                                }}
+                                className="hover:text-secondary"
+                                href="/faq"
+                            >
+                                FAQ
+                            </Link>
+                            <Link
+                                style={{
+                                    textShadow:
+                                        '0px 2px 4px rgba(255, 255, 255, 0.7)',
+                                }}
+                                className="hover:text-secondary"
                                 href="/gallery"
                             >
                                 Gallery

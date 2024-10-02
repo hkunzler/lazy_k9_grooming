@@ -2,7 +2,8 @@
 
 import Masonry from 'react-masonry-css';
 import Image from 'next/image';
-import bg from '../assets/bg.png';
+import background from '../assets/orange_yellow_hero.png';
+
 const images = [
     { src: '/dog1.jpg', alt: 'Groomed dog 1' },
     { src: '/dog2.jpg', alt: 'Groomed dog 2' },
@@ -56,19 +57,17 @@ const Gallery = () => {
     return (
         <>
             <section className="relative h-[60vh]">
-                <Image
-                    src={bg}
-                    alt="Lazy K9 Grooming"
-                    className="absolute top-[-30%] left-0 w-full object-contain"
-                    style={{
-                        maxWidth: '100%',
-                        height: 'auto',
-                    }}
-                />
+                <section className="flex justify-center items-center relative h-[50vh] ">
+                    <Image
+                        src={background}
+                        alt="Lazy K9 Grooming"
+                        className="absolute z-[-10] top-[-50%] left-0 w-full h-[100vh] object-cover"
+                    />
 
-                <div className="relative z-10 flex flex-col justify-center items-center h-screen text-white">
-                    <h2 className="text-8xl font-bold mb-4">Lazy K9 Models</h2>
-                </div>
+                    <h1 className="text-white font-bold text-8xl mb-2 ">
+                        Lazy K9 Models
+                    </h1>
+                </section>
             </section>
             <section className="py-16">
                 <div className="container mx-auto">
