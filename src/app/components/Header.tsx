@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../assets/logo.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,79 +15,89 @@ const Header = () => {
     return (
         <header>
             <nav className="sticky top-0 z-10 ">
-                <div className="max-w-5xl mx-auto p-4 mt-8">
+                <div className="x-auto p-4 mt-10">
                     <div className="flex justify-center items-center text-black font-black tracking-widest text-4xl">
-                        <div className="hidden lg:flex space-x-8 items-center">
-                            <Link
-                                style={{
-                                    textShadow:
-                                        '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                }}
-                                className="hover:text-secondary"
-                                href="/"
-                            >
-                                Home
-                            </Link>
-                            <Link
-                                style={{
-                                    textShadow:
-                                        '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                }}
-                                className="hover:text-secondary"
-                                href="/about"
-                            >
-                                About
-                            </Link>
-                            <Link
-                                style={{
-                                    textShadow:
-                                        '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                }}
-                                className="hover:text-secondary"
-                                href="/product-info"
-                            >
-                                Product Info
-                            </Link>
-                            <Link
-                                style={{
-                                    textShadow:
-                                        '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                }}
-                                className="hover:text-secondary"
-                                href="/prices"
-                            >
-                                Prices
-                            </Link>
-                            <Link
-                                style={{
-                                    textShadow:
-                                        '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                }}
-                                className="hover:text-secondary"
-                                href="/faq"
-                            >
-                                FAQ
-                            </Link>
-                            <Link
-                                style={{
-                                    textShadow:
-                                        '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                }}
-                                className="hover:text-secondary"
-                                href="/gallery"
-                            >
-                                Gallery
-                            </Link>
-                            <Link
-                                style={{
-                                    textShadow:
-                                        '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                }}
-                                className="hover:text-secondary"
-                                href="/contact"
-                            >
-                                Contact
-                            </Link>
+                        <div className="relative hidden lg:flex items-center w-full">
+                            <div className="absolute left-0 ml-4">
+                                <Image
+                                    src={logo}
+                                    alt="Lazy K9 Grooming"
+                                    className="max-w-32"
+                                />
+                            </div>
+
+                            <div className="flex justify-center w-full space-x-8">
+                                <Link
+                                    style={{
+                                        textShadow:
+                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
+                                    }}
+                                    className="hover:text-secondary"
+                                    href="/"
+                                >
+                                    Home
+                                </Link>
+                                <Link
+                                    style={{
+                                        textShadow:
+                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
+                                    }}
+                                    className="hover:text-secondary"
+                                    href="/about"
+                                >
+                                    About
+                                </Link>
+                                <Link
+                                    style={{
+                                        textShadow:
+                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
+                                    }}
+                                    className="hover:text-secondary"
+                                    href="/product-info"
+                                >
+                                    Product Info
+                                </Link>
+                                <Link
+                                    style={{
+                                        textShadow:
+                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
+                                    }}
+                                    className="hover:text-secondary"
+                                    href="/prices"
+                                >
+                                    Prices
+                                </Link>
+                                <Link
+                                    style={{
+                                        textShadow:
+                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
+                                    }}
+                                    className="hover:text-secondary"
+                                    href="/faq"
+                                >
+                                    FAQ
+                                </Link>
+                                <Link
+                                    style={{
+                                        textShadow:
+                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
+                                    }}
+                                    className="hover:text-secondary"
+                                    href="/gallery"
+                                >
+                                    Gallery
+                                </Link>
+                                <Link
+                                    style={{
+                                        textShadow:
+                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
+                                    }}
+                                    className="hover:text-secondary"
+                                    href="/contact"
+                                >
+                                    Contact
+                                </Link>
+                            </div>
                         </div>
 
                         <button

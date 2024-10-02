@@ -11,7 +11,7 @@ const config: Config = {
                 primary: '#7D53DE',
                 secondary: '#33157A',
                 background: '#E2E2E2',
-		black: '#333'
+                black: '#333',
             },
             fontFamily: {
                 heading: ['Poppins', 'sans-serif'],
