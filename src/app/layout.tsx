@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import './globals.css';
+import Link from 'next/link';
 
 export default function RootLayout({
     children,
@@ -15,23 +16,48 @@ export default function RootLayout({
                     <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div>
                             <h3 className="text-lg font-bold">Quick Links</h3>
-                            <ul className="mt-4 space-y-2">
-                                <li>
-                                    <a href="/">Home</a>
-                                </li>
-                                <li>
-                                    <a href="/about">About</a>
-                                </li>
-                                <li>
-                                    <a href="/product-info">Product Info</a>
-                                </li>
-                                <li>
-                                    <a href="/gallery">Gallery</a>
-                                </li>
-                                <li>
-                                    <a href="/contact">Contact</a>
-                                </li>
-                            </ul>
+                            <div className="flex flex-col mt-4 space-y-2">
+                                <Link className="hover:text-primary" href="/">
+                                    Home
+                                </Link>
+                                <Link
+                                    className="hover:text-primary"
+                                    href="/about"
+                                >
+                                    About
+                                </Link>
+                                <Link
+                                    className="hover:text-primary"
+                                    href="/product-info"
+                                >
+                                    Product Info
+                                </Link>
+                                <Link
+                                    className="hover:text-primary"
+                                    href="/prices"
+                                >
+                                    Prices
+                                </Link>
+                                <Link
+                                    className="hover:text-primary"
+                                    href="/faq"
+                                >
+                                    FAQ
+                                </Link>
+                                <Link
+                                    className="hover:text-primary"
+                                    href="/gallery"
+                                >
+                                    Gallery
+                                </Link>
+                                <Link
+                                    s
+                                    className="hover:text-primary"
+                                    href="/contact"
+                                >
+                                    Contact
+                                </Link>{' '}
+                            </div>
                         </div>
                         <div>
                             <h3 className="text-lg font-bold">Follow Us</h3>
