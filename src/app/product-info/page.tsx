@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import background from '../assets/blue_hero.png';
-import logo from '../assets/logo.png';
+
 const ProductInfo = () => {
     return (
         <div>

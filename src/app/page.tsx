@@ -4,7 +4,6 @@ import Product from './components/Product';
 import Services from './components/Services';
 import Team from './components/Team';
 import Image from 'next/image';
-import background from './assets/hero_background.svg';
 
 const Home = () => {
     return (
