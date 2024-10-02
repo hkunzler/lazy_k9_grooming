@@ -8,12 +8,12 @@ const Hero = () => {
             <Image
                 src={background}
                 alt="Lazy K9 Grooming"
-                className="absolute top-[-30%] left-0 w-full h-[70vh] object-cover"
+                className="absolute top-[-50%] left-0 w-full h-[100vh] object-cover"
             />
-	     <Image
+            <Image
                 src={logo}
                 alt="Lazy K9 Grooming"
-                className="absolute left-0 w-full h-[70vh] object-contain"
+                className="absolute left-0 w-full h-[50vh] object-contain"
             />
         </section>
     );
