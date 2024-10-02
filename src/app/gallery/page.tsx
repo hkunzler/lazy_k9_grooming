@@ -64,12 +64,12 @@ const Gallery = () => {
                         className="absolute z-[-10] top-[-50%] left-0 w-full h-[100vh] object-cover"
                     />
 
-                    <h1 className="text-white font-bold text-8xl mb-2 ">
+                    <h1 className="text-white font-bold text-6xl lg:text-8xl mb-2 ">
                         Lazy K9 Models
                     </h1>
                 </section>
             </section>
-            <section className="py-16">
+            <section className="py-16 px-4">
                 <div className="container mx-auto">
                     <Masonry
                         breakpointCols={breakpointColumnsObj}

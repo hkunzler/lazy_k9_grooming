@@ -32,7 +32,7 @@ const Home = () => {
                             <Product />
                         </div>
                     </div>
-                    <div className="lg:w-1/3">
+                    <div className="lg:w-1/3 px-4">
                         <Image
                             src="/dog17.jpg"
                             width={400}

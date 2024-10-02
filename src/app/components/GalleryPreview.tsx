@@ -53,8 +53,8 @@ export default function GalleryPreview() {
                 ))}
             </div>
 
-            <div className="flex justify-center justify-between mt-4">
-                <SecondaryButton>
+            <div className="flex justify-center justify-between m-4">
+                <SecondaryButton href="./prices">
                     View Services{' '}
                     <svg
                         width="25"

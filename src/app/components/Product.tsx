@@ -30,7 +30,7 @@ const Product = () => {
                 your pets. From shampoos to grooming tools, we ensure the best
                 for your furry friends.
             </p>
-            <SecondaryButton>
+            <SecondaryButton href="/product-info">
                 Products
                 <svg
                     width="25"

@@ -31,7 +31,7 @@ const Services = () => {
                 your pets. From shampoos to grooming tools, we ensure the best
                 for your furry friends.
             </p>
-            <SecondaryButton>Services</SecondaryButton>
+            <SecondaryButton href="/prices">Services</SecondaryButton>
         </div>
     );
 };

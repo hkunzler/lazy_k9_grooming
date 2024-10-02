@@ -15,7 +15,7 @@ const Contact = () => {
                             106 N Bent St Suite B<br />
                             Powell, WY 82435
                         </p>
-                        <p>Phone: (555) 123-4567</p>
+                        <p>Phone: (406) 597-1527</p>
                         <p>Email: contact@lazyk9grooming.com</p>
                     </div>
 

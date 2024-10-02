@@ -11,7 +11,7 @@ const About = () => {
                     className="absolute z-[-10] top-[-50%] left-0 w-full h-[100vh] object-cover"
                 />
 
-                <h1 className="text-white font-bold text-8xl mb-2 ">
+                <h1 className="text-white font-bold text-6xl lg:text-8xl mb-2 ">
                     Employee Bios
                 </h1>
             </section>

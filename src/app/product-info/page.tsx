@@ -16,7 +16,7 @@ const ProductInfo = () => {
                 </h1>
             </section>
 
-            <div className="mx-auto flex flex-col text-xl gap-32">
+            <div className="mx-auto flex flex-col text-xl  px-4 gap-32">
                 <div className="container flex flex-col items-center lg:items-start space-y-8 lg:space-x-16 mx-auto pb-16 pt-72 z-10">
                     <h1 className="text-primary font-bold text-3xl mb-2">
                         We at Lazy K9 are committed to using the best possible

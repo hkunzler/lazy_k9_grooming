@@ -13,7 +13,7 @@ const Hero = () => {
             <Image
                 src={logo}
                 alt="Lazy K9 Grooming"
-                className="absolute left-0 w-full h-[50vh] object-contain"
+                className="absolute left-0 w-full px-4 h-[50vh] object-contain"
             />
         </section>
     );
