@@ -57,7 +57,6 @@ export default function RootLayout({
                                         Gallery
                                     </Link>
                                     <Link
-                                        s
                                         className="hover:text-primary"
                                         href="/contact"
                                     >
