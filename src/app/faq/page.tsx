@@ -21,7 +21,7 @@ const FAQ = () => {
                         left with a babysitter. Almost all dogs relax and are
                         happy to hang out once their owners have left their
                         sight. We will always communicate openly and honestly
-                        about your dog’s experience and behavior.
+                        about your dog&apos;s experience and behavior.
                     </p>
                 </div>
 
@@ -84,9 +84,9 @@ const FAQ = () => {
                         Aggression in dogs can be complex, stemming from fear,
                         trauma, or genetics. While we don’t turn dogs away for
                         behavior, dogs that are adverse to grooming may need to
-                        go through "grooming rehab" with many short, easy
+                        go through &quot;grooming rehab&quot; with many short, easy
                         appointments to desensitize them. Safety is paramount,
-                        and we reserve the right to refuse service if a dog's
+                        and we reserve the right to refuse service if a dog&apos;s
                         behavior is too risky.
                     </p>
                 </div>
@@ -109,8 +109,8 @@ const FAQ = () => {
                         How long will my dog’s appointment take?
                     </h3>
                     <p>
-                        Appointment duration varies based on your pet's on-time
-                        arrival, mood, and style needs. We don't rush, as haste
+                        Appointment duration varies based on your pet&apos;s on-time
+                        arrival, mood, and style needs. We don&apos;t rush, as haste
                         can stress pets. If you have a specific pickup time,
                         please inform us in advance.
                     </p>
@@ -146,7 +146,7 @@ const FAQ = () => {
                     <p>
                         Yes, creative grooming is safe. We use dyes specially
                         formulated for the pH of canine skin to express your
-                        dog's personality safely.
+                        dog&apos;s personality safely.
                     </p>
                 </div>
 
@@ -170,7 +170,7 @@ const FAQ = () => {
                     <p>
                         Nail maintenance is included with every appointment. We
                         aim to trim nails as short as possible while ensuring
-                        your dog's comfort and health.
+                        your dog&apos;s comfort and health.
                     </p>
                 </div>
 
@@ -181,7 +181,7 @@ const FAQ = () => {
                     <p>
                         Our pricing varies based on the type of service, dog
                         breed, coat type, size, style, and behavior. For
-                        detailed information, please refer to our "prices" tab.
+                        detailed information, please refer to our &quot;prices&quot; tab.
                     </p>
                 </div>
             </div>

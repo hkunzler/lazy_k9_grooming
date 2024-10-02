@@ -52,7 +52,7 @@ const Pricing = () => {
                         A La Carte
                     </h3>
                     <p>
-                        Nail trims for maintaining your pet's grooming between
+                        Nail trims for maintaining your pet&apos;s grooming between
                         regular visits:
                     </p>
                     <ul className="list-disc pl-5 space-y-1">
