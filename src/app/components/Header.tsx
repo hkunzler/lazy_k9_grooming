@@ -1,18 +1,30 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '/public/logo.png';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
+        const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
     const isHomePage = pathname === '/';
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [isOpen]);
+
     return (
         <header>
             <nav className="sticky top-0 z-50 w-full">
