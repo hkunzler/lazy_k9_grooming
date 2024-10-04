@@ -5,8 +5,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '/public/logo.png';
 import { usePathname } from 'next/navigation';
+import { navLinks } from '../constants';
 
-const Header = () => {
+export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen((prev) => !prev);
     
@@ -19,16 +20,6 @@ const Header = () => {
             document.body.style.overflow = 'auto';
         };
     }, [isOpen]);
-
-    const navLinks = [
-        { href: '/', label: 'Home' },
-        { href: '/about', label: 'About' },
-        { href: '/product-info', label: 'Product Info' },
-        { href: '/prices', label: 'Prices' },
-        { href: '/faq', label: 'FAQ' },
-        { href: '/gallery', label: 'Gallery' },
-        { href: '/contact', label: 'Contact' },
-    ];
 
     return (
         <header>
@@ -95,5 +86,3 @@ const Header = () => {
         </header>
     );
 };
-
-export default Header;
