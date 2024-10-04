@@ -7,7 +7,7 @@ import logo from '/public/logo.png';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
-        const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
     const toggleMenu = () => {
         setIsOpen(!isOpen);

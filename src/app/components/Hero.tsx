@@ -8,7 +8,7 @@ const Hero = () => {
             <Image
                 priority
                 src={background}
-		placeholder="blur"
+                placeholder="blur"
                 blurDataURL={background.blurDataURL}
                 alt="Lazy K9 Grooming"
                 className="absolute top-[-50%] -z-10 left-0 w-full h-[100vh] object-cover"

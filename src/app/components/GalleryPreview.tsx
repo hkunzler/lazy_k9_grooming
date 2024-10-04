@@ -1,8 +1,8 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
-
 import { SecondaryButton } from './Buttons';
+
 import { ArrowIcon } from '../assets/ArrowIcon';
 import { RightCircleArrowIcon } from '../assets/RightCircleArrowIcon';
 import { LeftCircleArrowIcon } from '../assets/LeftCircleArrowIcon';
@@ -20,10 +20,9 @@ const images = [
     { src: dog4.src, alt: 'Groomed dog 4', blurDataURL: dog4.blurDataURL },
     { src: dog5.src, alt: 'Groomed dog 5', blurDataURL: dog5.blurDataURL },
 ];
-
 export default function GalleryPreview() {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    const startX = useRef(0);
     const handlePrev = () =>
         setCurrentIndex((currentIndex) =>
             currentIndex > 0 ? currentIndex - 1 : images.length - 3,
@@ -34,6 +33,21 @@ export default function GalleryPreview() {
             currentIndex + 2 < images.length - 1 ? currentIndex + 1 : 0,
         );
 
+    const handleTouchStart = (e: React.TouchEvent) => {
+        startX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        const endX = e.changedTouches[0].clientX;
+        const distance = startX.current - endX;
+
+        if (distance > 50) {
+            handleNext();
+        } else if (distance < -50) {
+            handlePrev();
+        }
+    };
+
     const maxTransformIndex = images.length - 3;
     const transformPercentage =
         Math.min(currentIndex, maxTransformIndex) * (100 / 3);
@@ -43,6 +57,8 @@ export default function GalleryPreview() {
             <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${transformPercentage}%)` }}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
             >
                 {images.map((image, index) => (
                     <div
