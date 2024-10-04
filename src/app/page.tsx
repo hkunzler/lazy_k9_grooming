@@ -35,9 +35,9 @@ const cards = [
 
 const Home = () => {
     return (
-        <div className="mx-auto flex flex-col gap-32">
+        <section className="mx-auto flex flex-col gap-32">
             <Hero />
-            <section className="py-16">
+            <div className="py-16">
                 <div className="container flex flex-col justify-around mx-auto lg:flex-row items-center lg:space-x-16">
                     <div className="lg:w-1/2 p-8">
                         <h2>Luxury Dog Grooming</h2>
@@ -65,11 +65,11 @@ const Home = () => {
                         sizes="100vw"
                     />
                 </div>
-            </section>
+            </div>
 
             <GalleryPreview />
             <Team />
-        </div>
+        </section>
     );
 };
 

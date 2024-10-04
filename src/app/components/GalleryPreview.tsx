@@ -1,11 +1,12 @@
 'use client';
 import { useState, useRef } from 'react';
-import Image from 'next/image';
 import { SecondaryButton } from './Buttons';
-
 import { ArrowIcon } from '../assets/ArrowIcon';
 import { RightCircleArrowIcon } from '../assets/RightCircleArrowIcon';
 import { LeftCircleArrowIcon } from '../assets/LeftCircleArrowIcon';
+import { GalleryArrow } from './GalleryArrow';
+import { GalleryDots } from './GalleryDots';
+import { GalleryImage } from './GalleryImage';
 
 import dog1 from '/public/dog9.jpg';
 import dog2 from '/public/dog16.jpg';
@@ -20,18 +21,22 @@ const images = [
     { src: dog4.src, alt: 'Groomed dog 4', blurDataURL: dog4.blurDataURL },
     { src: dog5.src, alt: 'Groomed dog 5', blurDataURL: dog5.blurDataURL },
 ];
+
 export default function GalleryPreview() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const startX = useRef(0);
-    const handlePrev = () =>
-        setCurrentIndex((currentIndex) =>
-            currentIndex > 0 ? currentIndex - 1 : images.length - 3,
-        );
 
-    const handleNext = () =>
-        setCurrentIndex((currentIndex) =>
-            currentIndex + 2 < images.length - 1 ? currentIndex + 1 : 0,
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex > 0 ? prevIndex - 1 : images.length - 3,
         );
+    };
+
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex < images.length - 3 ? prevIndex + 1 : 0,
+        );
+    };
 
     const handleTouchStart = (e: React.TouchEvent) => {
         startX.current = e.touches[0].clientX;
@@ -61,45 +66,32 @@ export default function GalleryPreview() {
                 onTouchEnd={handleTouchEnd}
             >
                 {images.map((image, index) => (
-                    <div
+                    <GalleryImage
                         key={index}
-                        className="relative flex-shrink-0 w-1/3 p-2"
-                    >
-                        <Image
-                            src={image.src}
-                            alt={image.alt}
-                            placeholder="blur"
-                            blurDataURL={image.blurDataURL}
-                            width={400}
-                            height={300}
-                            sizes="(max-width: 768px) 100vw, 33vw"
-                        />
-                    </div>
+                        src={image.src}
+                        alt={image.alt}
+                        blurDataURL={image.blurDataURL}
+                    />
                 ))}
             </div>
-
-            <div className="flex justify-center justify-between m-4">
-                <SecondaryButton href="./prices">
-                    View Services <ArrowIcon />
-                </SecondaryButton>
-
-                <div className="flex justify-center space-x-2 mt-4">
-                    {[...Array(images.length - 2)].map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setCurrentIndex(index)}
-                            className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-secondary' : 'bg-primary'}`}
-                        ></button>
-                    ))}
-                </div>
-
+            <div className="flex justify-between items-center m-4">
+                <SecondaryButton arrow href="./prices">View Services</SecondaryButton>
+                <GalleryDots
+                    total={images.length - 2}
+                    currentIndex={currentIndex}
+                    onDotClick={setCurrentIndex}
+                />
                 <div className="flex gap-4">
-                    <button onClick={handlePrev}>
-                        <LeftCircleArrowIcon />
-                    </button>
-                    <button onClick={handleNext}>
-                        <RightCircleArrowIcon />
-                    </button>
+                    <GalleryArrow
+                        onClick={handlePrev}
+                        direction="left"
+                        Icon={<LeftCircleArrowIcon />}
+                    />
+                    <GalleryArrow
+                        onClick={handleNext}
+                        direction="right"
+                        Icon={<RightCircleArrowIcon />}
+                    />
                 </div>
             </div>
         </div>
