@@ -25,7 +25,9 @@
         @apply text-lg text-gray-700 leading-relaxed;
     }
 
-    h3,
+    h3 {
+        @apply font-ptSans text-3xl text-primary font-bold my-2;
+    }
     h4,
     h5,
     h6 {

@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import Hero from './components/Hero';
 import Product from './components/Product';
-import Services from './components/Services';
+import { Services } from './components/Services';
 import Team from './components/Team';
 import Image from 'next/image';
 import { Spinner } from './components/Spinner';
