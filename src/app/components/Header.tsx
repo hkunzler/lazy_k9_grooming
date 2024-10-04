@@ -8,22 +8,27 @@ import { usePathname } from 'next/navigation';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const toggleMenu = () => setIsOpen((prev) => !prev);
+    
     const pathname = usePathname();
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
     const isHomePage = pathname === '/';
 
     useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
+        document.body.style.overflow = isOpen ? 'hidden' : 'auto';
         return () => {
             document.body.style.overflow = 'auto';
         };
     }, [isOpen]);
+
+    const navLinks = [
+        { href: '/', label: 'Home' },
+        { href: '/about', label: 'About' },
+        { href: '/product-info', label: 'Product Info' },
+        { href: '/prices', label: 'Prices' },
+        { href: '/faq', label: 'FAQ' },
+        { href: '/gallery', label: 'Gallery' },
+        { href: '/contact', label: 'Contact' },
+    ];
 
     return (
         <header>
@@ -33,7 +38,6 @@ const Header = () => {
                         {!isHomePage && (
                             <div className="absolute left-0 top-4 ml-4 lg:ml-16">
                                 <Link href="/">
-                                    {' '}
                                     <Image
                                         src={logo}
                                         alt="Lazy K9 Grooming"
@@ -49,114 +53,41 @@ const Header = () => {
                         >
                             &#9776;
                         </button>
+
                         <div className="hidden lg:flex items-center justify-center w-full">
                             <div className="flex justify-center w-full pt-8 space-x-8">
-                                <Link
-                                    style={{
-                                        textShadow:
-                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                    }}
-                                    className="hover:text-secondary"
-                                    href="/"
-                                >
-                                    Home
-                                </Link>
-                                <Link
-                                    style={{
-                                        textShadow:
-                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                    }}
-                                    className="hover:text-secondary"
-                                    href="/about"
-                                >
-                                    About
-                                </Link>
-                                <Link
-                                    style={{
-                                        textShadow:
-                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                    }}
-                                    className="hover:text-secondary"
-                                    href="/product-info"
-                                >
-                                    Product Info
-                                </Link>
-                                <Link
-                                    style={{
-                                        textShadow:
-                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                    }}
-                                    className="hover:text-secondary"
-                                    href="/prices"
-                                >
-                                    Prices
-                                </Link>
-                                <Link
-                                    style={{
-                                        textShadow:
-                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                    }}
-                                    className="hover:text-secondary"
-                                    href="/faq"
-                                >
-                                    FAQ
-                                </Link>
-                                <Link
-                                    style={{
-                                        textShadow:
-                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                    }}
-                                    className="hover:text-secondary"
-                                    href="/gallery"
-                                >
-                                    Gallery
-                                </Link>
-                                <Link
-                                    style={{
-                                        textShadow:
-                                            '0px 2px 4px rgba(255, 255, 255, 0.7)',
-                                    }}
-                                    className="hover:text-secondary"
-                                    href="/contact"
-                                >
-                                    Contact
-                                </Link>
+                                {navLinks.map(({ href, label }) => (
+                                    <Link
+                                        key={href}
+                                        href={href}
+                                        className="hover:text-secondary white-shadow"
+                                    >
+                                        {label}
+                                    </Link>
+                                ))}
                             </div>
                         </div>
                     </div>
 
                     <div
-                        className={`${isOpen ? 'fixed inset-0 bg-white' : 'hidden'} lg:hidden`}
-                        style={{ zIndex: 1000 }}
+                        className={`${isOpen ? 'fixed inset-0 bg-white' : 'hidden'} lg:hidden z-20`}
                     >
                         <div className="flex flex-col items-center justify-center space-y-4 text-black text-xl min-h-screen">
                             <button
                                 onClick={toggleMenu}
                                 className="absolute top-0 right-0 mt-8 mr-4 text-3xl"
                             >
-                                &times;{' '}
+                                &times;
                             </button>
-                            <Link href="/" onClick={toggleMenu}>
-                                Home
-                            </Link>
-                            <Link href="/about" onClick={toggleMenu}>
-                                About
-                            </Link>
-                            <Link href="/product-info" onClick={toggleMenu}>
-                                Product Info
-                            </Link>
-                            <Link href="/prices" onClick={toggleMenu}>
-                                Prices
-                            </Link>
-                            <Link href="/faq" onClick={toggleMenu}>
-                                FAQ
-                            </Link>
-                            <Link href="/gallery" onClick={toggleMenu}>
-                                Gallery
-                            </Link>
-                            <Link href="/contact" onClick={toggleMenu}>
-                                Contact
-                            </Link>
+                            {navLinks.map(({ href, label }) => (
+                                <Link
+                                    key={href}
+                                    href={href}
+                                    onClick={toggleMenu}
+                                >
+                                    {label}
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </div>
