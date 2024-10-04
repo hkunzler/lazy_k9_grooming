@@ -26,7 +26,11 @@ export const Footer = () => {
                         <h3 className="text-lg font-bold">Quick Links</h3>
                         <div className="flex flex-col mt-4 space-y-2">
                             {navLinks.map(({ href, label }) => (
-                                <Link key={href} className="hover:text-primary" href={href}>
+                                <Link
+                                    key={href}
+                                    className="hover:text-primary"
+                                    href={href}
+                                >
                                     {label}
                                 </Link>
                             ))}
@@ -57,4 +61,3 @@ export const Footer = () => {
         </footer>
     );
 };
-;

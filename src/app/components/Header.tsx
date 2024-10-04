@@ -10,7 +10,7 @@ import { navLinks } from '../constants';
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen((prev) => !prev);
-    
+
     const pathname = usePathname();
     const isHomePage = pathname === '/';
 

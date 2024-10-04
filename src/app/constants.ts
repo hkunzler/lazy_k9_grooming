@@ -7,4 +7,3 @@ export const navLinks = [
     { href: '/gallery', label: 'Gallery' },
     { href: '/contact', label: 'Contact' },
 ];
-

@@ -14,10 +14,17 @@
     }
 
     h1 {
-        @apply font-ptSans;
+        @apply font-ptSans text-5xl lg:text-6xl text-primary font-bold mb-6;
     }
 
-    h2,
+    h2 {
+        @apply font-wendy text-xl text-gray-600 font-bold uppercase mb-4;
+    }
+
+    p {
+        @apply text-lg text-gray-700 leading-relaxed;
+    }
+
     h3,
     h4,
     h5,
