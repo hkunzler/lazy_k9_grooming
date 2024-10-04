@@ -1,9 +1,7 @@
 'use client';
 import { useState, useRef } from 'react';
 import { SecondaryButton } from './Buttons';
-import { ArrowIcon } from '../assets/ArrowIcon';
-import { RightCircleArrowIcon } from '../assets/RightCircleArrowIcon';
-import { LeftCircleArrowIcon } from '../assets/LeftCircleArrowIcon';
+
 import { GalleryArrow } from './GalleryArrow';
 import { GalleryDots } from './GalleryDots';
 import { GalleryImage } from './GalleryImage';
@@ -85,12 +83,10 @@ export default function GalleryPreview() {
                     <GalleryArrow
                         onClick={handlePrev}
                         direction="left"
-                        Icon={<LeftCircleArrowIcon />}
                     />
                     <GalleryArrow
                         onClick={handleNext}
                         direction="right"
-                        Icon={<RightCircleArrowIcon />}
                     />
                 </div>
             </div>

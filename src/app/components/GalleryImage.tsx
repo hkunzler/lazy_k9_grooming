@@ -3,7 +3,7 @@ import Image from 'next/image';
 interface GalleryImageProps {
     src: string;
     alt: string;
-    blurDataURL: string;
+    blurDataURL?: string;
 }
 
 export const GalleryImage = ({ src, alt, blurDataURL }: GalleryImageProps) => {
