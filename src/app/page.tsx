@@ -1,5 +1,10 @@
+import dynamic from 'next/dynamic';
+
 import Hero from './components/Hero';
-import GalleryPreview from './components/GalleryPreview';
+const GalleryPreview = dynamic(() => import('./components/GalleryPreview'), {
+    loading: () => <p>Loading...</p>,
+    ssr: false,
+});
 import Product from './components/Product';
 import Services from './components/Services';
 import Team from './components/Team';

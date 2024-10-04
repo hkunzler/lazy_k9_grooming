@@ -52,8 +52,8 @@ const Pricing = () => {
                         A La Carte
                     </h3>
                     <p>
-                        Nail trims for maintaining your pet&apos;s grooming between
-                        regular visits:
+                        Nail trims for maintaining your pet&apos;s grooming
+                        between regular visits:
                     </p>
                     <ul className="list-disc pl-5 space-y-1">
                         <li>Small dogs (25lbs and under): $10</li>
