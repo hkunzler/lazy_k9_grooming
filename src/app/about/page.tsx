@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { BioCard } from '../components/BioCard';
-import background from '../assets/pink_blue_hero.png';
+import background from '/public/pink_blue_hero.png';
 import { bios } from '../data/bios';
 
 const About = () => {

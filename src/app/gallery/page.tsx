@@ -2,7 +2,7 @@
 
 import Masonry from 'react-masonry-css';
 import Image from 'next/image';
-import background from '../assets/orange_yellow_hero.png';
+import background from '/public/orange_yellow_hero.png';
 
 const images = [
     { src: '/dog1.jpg', alt: 'Groomed dog 1' },
