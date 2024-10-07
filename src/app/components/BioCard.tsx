@@ -15,5 +15,3 @@ export const BioCard = ({ name, title, description }: BioCardProps) => {
         </div>
     );
 };
-
-

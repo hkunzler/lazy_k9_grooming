@@ -6,10 +6,7 @@ interface GalleryArrowProps {
     direction: 'left' | 'right';
 }
 
-export const GalleryArrow = ({
-    onClick,
-    direction,
-}: GalleryArrowProps) => {
+export const GalleryArrow = ({ onClick, direction }: GalleryArrowProps) => {
     return (
         <button
             onClick={onClick}
@@ -17,7 +14,11 @@ export const GalleryArrow = ({
                 direction === 'left' ? 'mr-2' : 'ml-2'
             }`}
         >
-            {direction === 'left' ? <LeftCircleArrowIcon /> : <RightCircleArrowIcon />}
+            {direction === 'left' ? (
+                <LeftCircleArrowIcon />
+            ) : (
+                <RightCircleArrowIcon />
+            )}
         </button>
     );
 };

@@ -1,31 +1,49 @@
 import Image from 'next/image';
-import background from '/public/hero_background.png';
-import logo from '/public/logo.png';
 
-const Hero = () => {
+interface ImageProps {
+    src: string;
+    height: number;
+    width: number;
+    blurDataURL?: string;
+    blurWidth?: number;
+    blurHeight?: number;
+}
+interface HeroProps {
+    heading?: string;
+    background?: ImageProps;
+    logo?: ImageProps;
+    className?: string;
+}
+
+export const Hero = ({ heading, background, logo, className }: HeroProps) => {
     return (
-        <section className="relative h-[50vh] ">
-            <Image
-                priority
-                src={background}
-                placeholder="blur"
-                blurDataURL={background.blurDataURL}
-                alt="Lazy K9 Grooming"
-                className="absolute top-[-50%] -z-10 left-0 w-full h-[100vh] object-cover"
-            />
-            <Image
-                priority
-                placeholder="blur"
-                blurDataURL={logo.blurDataURL}
-                src={logo}
-                alt="Lazy K9 Grooming"
-                fill
-                style={{
-                    objectFit: 'contain',
-                }}
-            />
+        <section className="relative h-[50vh] flex justify-center  items-center">
+            {background && (
+                <Image
+                    priority
+                    src={background.src}
+                    placeholder="blur"
+                    blurDataURL={background.blurDataURL}
+                    alt="Background image"
+		    fill
+                    className={`absolute top-[-50%] -z-10 left-0 w-full h-[100vh] overflow-visible ${className}`}
+		    objectFit={"cover"}
+                />
+            )}
+            {logo && (
+                <Image
+                    priority
+                    src={logo}
+                    alt="Logo"
+                    fill
+                    objectFit={"contain"}
+                />
+            )}
+            {heading && (
+                <h1 className=" text-white font-bold text-5xl md:text-6xl lg:text-8xl text-center">
+                    {heading}
+                </h1>
+            )}
         </section>
     );
 };
-
-export default Hero;

@@ -2,6 +2,7 @@
 
 import Masonry from 'react-masonry-css';
 import Image from 'next/image';
+import { Hero } from '../components/Hero';
 import background from '/public/orange_yellow_hero.png';
 
 const images = [
@@ -57,18 +58,8 @@ const Gallery = () => {
     return (
         <>
             <section className="relative h-[60vh]">
-                <section className="flex justify-center items-center relative h-[50vh] ">
-                    <Image
-                        src={background}
-                        alt="Lazy K9 Grooming"
-                        className="absolute z-[-10] top-[-50%] left-0 w-full h-[100vh] object-cover"
-                    />
-
-                    <h1 className="text-white font-bold text-6xl lg:text-8xl mb-2 ">
-                        Lazy K9 Models
-                    </h1>
-                </section>
-            </section>
+	    	<Hero heading="Lazy K9 Models" background={{...background}} />
+                          </section>
             <section className="py-16 px-4">
                 <div className="container mx-auto">
                     <Masonry

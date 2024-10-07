@@ -1,11 +1,13 @@
 import dynamic from 'next/dynamic';
-import Hero from './components/Hero';
+import { Hero } from './components/Hero';
 import Team from './components/Team';
 import Image from 'next/image';
 import { Spinner } from './components/Spinner';
 import { InfoCard } from './components/InfoCard';
 import { StarIcon } from './assets/StarIcon';
 import { HeartIcon } from './assets/HeartIcon';
+import background from '/public/hero_background.png';
+import logo from '/public/logo.png';
 
 const GalleryPreview = dynamic(() => import('./components/GalleryPreview'), {
     loading: () => <Spinner />,
@@ -36,7 +38,7 @@ const cards = [
 const Home = () => {
     return (
         <section className="mx-auto flex flex-col gap-32">
-            <Hero />
+            <Hero background={{ ...background }} logo={{ ...logo }} />
             <div className="py-16">
                 <div className="container flex flex-col justify-around mx-auto lg:flex-row items-center lg:space-x-16">
                     <div className="lg:w-1/2 p-8">

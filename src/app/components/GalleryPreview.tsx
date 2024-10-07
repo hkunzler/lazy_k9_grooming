@@ -73,21 +73,17 @@ export default function GalleryPreview() {
                 ))}
             </div>
             <div className="flex justify-between items-center m-4">
-                <SecondaryButton arrow href="./prices">View Services</SecondaryButton>
+                <SecondaryButton arrow href="./prices">
+                    View Services
+                </SecondaryButton>
                 <GalleryDots
                     total={images.length - 2}
                     currentIndex={currentIndex}
                     onDotClick={setCurrentIndex}
                 />
                 <div className="flex gap-4">
-                    <GalleryArrow
-                        onClick={handlePrev}
-                        direction="left"
-                    />
-                    <GalleryArrow
-                        onClick={handleNext}
-                        direction="right"
-                    />
+                    <GalleryArrow onClick={handlePrev} direction="left" />
+                    <GalleryArrow onClick={handleNext} direction="right" />
                 </div>
             </div>
         </div>

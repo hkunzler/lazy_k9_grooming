@@ -1,23 +1,13 @@
-import Image from 'next/image';
 import background from '/public/blue_hero.png';
+import { Hero } from '../components/Hero';
 
 const ProductInfo = () => {
     return (
-        <div>
-            <section className="flex justify-center items-center relative h-[50vh] ">
-                <Image
-                    src={background}
-                    alt="Lazy K9 Grooming"
-                    className="absolute top-[-50%] left-0 w-full h-[100vh] object-cover opacity-80"
-                />
-
-                <h1 className="text-white font-bold text-8xl mb-2 z-10">
-                    Products
-                </h1>
-            </section>
+<div className="mx-auto flex flex-col text-xl  px-4 gap-4 md:gap-32 lg:gap-72">
+            <Hero heading="Products" background={{ ...background }} />
 
             <div className="mx-auto flex flex-col text-xl  px-4 gap-32">
-                <div className="container flex flex-col items-center lg:items-start space-y-8 lg:space-x-16 mx-auto pb-16 pt-72 z-10">
+                <div className="container flex flex-col items-center lg:items-start space-y-8 lg:space-x-16 mx-auto pb-16 z-10">
                     <h1 className="text-primary font-bold text-3xl mb-2">
                         We at Lazy K9 are committed to using the best possible
                         products for your pets.
