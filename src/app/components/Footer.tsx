@@ -50,7 +50,7 @@ export const Footer = () => {
                 <div className="flex gap-4 flex-col lg:flex-row-reverse">
                     <div className="min-w-48">
                         <h3 className="text-lg font-bold">Address</h3>
-                        <p className="mt-4">
+                        <p className="mt-4 text-white">
                             106 N Bent St Suite B<br />
                             Powell, WY 82435
                         </p>
