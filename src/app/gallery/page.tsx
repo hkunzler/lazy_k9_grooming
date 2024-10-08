@@ -1,9 +1,16 @@
 'use client';
 
+import { useState } from 'react';
 import Masonry from 'react-masonry-css';
 import Image from 'next/image';
 import { Hero } from '../components/Hero';
+import { Modal } from '../components/Modal';
 import background from '/public/orange_yellow_hero.png';
+
+interface GalleryImageProps {
+    src: string;
+    alt: string;
+}
 
 const images = [
     { src: '/dog1.jpg', alt: 'Groomed dog 1' },
@@ -49,6 +56,20 @@ const images = [
 ];
 
 const Gallery = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedImage, setSelectedImage] =
+        useState<GalleryImageProps | null>(null);
+
+    const openModal = (image: GalleryImageProps) => {
+        setSelectedImage(image);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedImage(null);
+    };
+
     const breakpointColumnsObj = {
         default: 3,
         1100: 2,
@@ -68,7 +89,11 @@ const Gallery = () => {
                         columnClassName="pl-4"
                     >
                         {images.map((image, index) => (
-                            <div key={index} className="mb-4 w-full relative">
+                            <div
+                                key={index}
+                                className="mb-4 w-full relative"
+                                onClick={() => openModal(image)}
+                            >
                                 <Image
                                     src={image.src}
                                     alt={image.alt}
@@ -87,6 +112,12 @@ const Gallery = () => {
                     </Masonry>
                 </div>
             </section>
+
+            <Modal
+                isOpen={isModalOpen}
+                image={selectedImage}
+                onClose={closeModal}
+            />
         </>
     );
 };
