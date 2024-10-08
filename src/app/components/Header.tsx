@@ -51,7 +51,10 @@ export const Header = () => {
                                     <Link
                                         key={href}
                                         href={href}
-                                        className="hover:text-secondary white-shadow"
+                                        className={` hover:text-secondary white-shadow ${
+                                            pathname === href &&
+                                            'text-primary border-b-2 border-primary'
+                                        }`}
                                     >
                                         {label}
                                     </Link>
@@ -63,7 +66,7 @@ export const Header = () => {
                     <div
                         className={`${isOpen ? 'fixed inset-0 bg-white' : 'hidden'} lg:hidden z-20`}
                     >
-                        <div className="flex flex-col items-center justify-center space-y-4 text-black text-xl min-h-screen">
+                        <div className="flex flex-col items-center justify-center space-y-4 text-black text-3xl tracking-wide min-h-screen">
                             <button
                                 onClick={toggleMenu}
                                 className="absolute top-0 right-0 mt-8 mr-4 text-3xl"
@@ -75,6 +78,10 @@ export const Header = () => {
                                     key={href}
                                     href={href}
                                     onClick={toggleMenu}
+                                    className={`${
+                                        pathname === href &&
+                                        'text-primary border-b-2 border-primary'
+                                    }`}
                                 >
                                     {label}
                                 </Link>

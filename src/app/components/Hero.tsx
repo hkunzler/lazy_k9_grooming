@@ -41,7 +41,7 @@ export const Hero = ({ heading, background, logo, className }: HeroProps) => {
                 />
             )}
             {heading && (
-                <h1 className=" text-white font-bold text-5xl md:text-6xl lg:text-8xl text-center">
+                <h1 className="text-black white-shadow font-bold m-8 text-8xl text-center">
                     {heading}
                 </h1>
             )}

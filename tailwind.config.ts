@@ -13,10 +13,10 @@ const config: Config = {
                 background: '#E2E2E2',
                 black: '#333',
             },
-        
+
             fontFamily: {
-                sans: ['var(--font-k2d)', 'sans-serif'], 
-                ptSans: ['var(--font-pt-sans)', 'sans-serif'], 
+                sans: ['var(--font-k2d)', 'sans-serif'],
+                ptSans: ['var(--font-pt-sans)', 'sans-serif'],
                 wendy: ['var(--font-wendy-one)', 'sans-serif'],
             },
             spacing: {
