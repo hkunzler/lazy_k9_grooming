@@ -13,11 +13,11 @@ const config: Config = {
                 background: '#E2E2E2',
                 black: '#333',
             },
+        
             fontFamily: {
-                heading: ['Poppins', 'sans-serif'],
-                sans: ['K2D', 'sans-serif'],
-                ptSans: ['PT Sans', 'sans-serif'],
-                wendy: ['Wendy One', 'sans-serif'],
+                sans: ['var(--font-k2d)', 'sans-serif'], 
+                ptSans: ['var(--font-pt-sans)', 'sans-serif'], 
+                wendy: ['var(--font-wendy-one)', 'sans-serif'],
             },
             spacing: {
                 '72': '18rem',
