@@ -77,10 +77,12 @@ export default function GalleryPreview() {
                     View Services
                 </SecondaryButton>
                 <GalleryDots
+                    className="sm:flex hidden items-center"
                     total={images.length - 2}
                     currentIndex={currentIndex}
                     onDotClick={setCurrentIndex}
                 />
+
                 <div className="flex gap-4">
                     <GalleryArrow onClick={handlePrev} direction="left" />
                     <GalleryArrow onClick={handleNext} direction="right" />

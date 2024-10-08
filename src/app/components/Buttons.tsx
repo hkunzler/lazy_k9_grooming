@@ -13,14 +13,18 @@ export const SecondaryButton = ({
     children,
     href,
     arrow = false,
+    className = '',
 }: {
     children: React.ReactNode;
     href: string;
     arrow?: boolean;
+    className?: string;
 }) => {
     return (
         <Link href={href}>
-            <button className="text-primary font-bold py-2 px-4 border-2 border-primary rounded-lg hover:border-secondary hover:text-secondary flex gap-4">
+            <button
+                className={`text-primary font-bold items-center py-2 px-4 border-2 border-primary rounded-lg hover:border-secondary hover:text-secondary flex gap-4 ${className}`}
+            >
                 {children}
                 {arrow && <ArrowIcon />}
             </button>

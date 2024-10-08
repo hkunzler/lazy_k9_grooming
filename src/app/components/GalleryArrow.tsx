@@ -8,12 +8,7 @@ interface GalleryArrowProps {
 
 export const GalleryArrow = ({ onClick, direction }: GalleryArrowProps) => {
     return (
-        <button
-            onClick={onClick}
-            className={`p-2 rounded-full ${
-                direction === 'left' ? 'mr-2' : 'ml-2'
-            }`}
-        >
+        <button onClick={onClick}>
             {direction === 'left' ? (
                 <LeftCircleArrowIcon />
             ) : (

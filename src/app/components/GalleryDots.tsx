@@ -2,15 +2,17 @@ interface GalleryDotsProps {
     total: number;
     currentIndex: number;
     onDotClick: (index: number) => void;
+    className?: string;
 }
 
 export const GalleryDots = ({
     total,
     currentIndex,
     onDotClick,
+    className = '',
 }: GalleryDotsProps) => {
     return (
-        <div className="flex gap-2">
+        <div className={`flex justify-center gap-2 ${className}`}>
             {Array.from({ length: total }).map((_, index) => (
                 <button
                     key={index}
