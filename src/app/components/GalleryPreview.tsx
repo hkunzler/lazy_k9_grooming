@@ -1,16 +1,27 @@
 'use client';
+
+import Image from 'next/image';
 import { useState, useRef } from 'react';
 import { SecondaryButton } from './Buttons';
 
 import { GalleryArrow } from './GalleryArrow';
 import { GalleryDots } from './GalleryDots';
-import { GalleryImage } from './GalleryImage';
 
 import dog1 from '/public/dog9.jpg';
 import dog2 from '/public/dog16.jpg';
 import dog3 from '/public/dog13.jpg';
 import dog4 from '/public/dog9.jpg';
 import dog5 from '/public/dog10.jpg';
+
+interface GalleryImageProps {
+    src: string;
+    alt: string;
+    blurDataURL?: string;
+}
+
+interface ImagePreviewProps {
+    onSelectImage: (image: GalleryImageProps) => void;
+}
 
 const images = [
     { src: dog1.src, alt: 'Groomed dog 1', blurDataURL: dog1.blurDataURL },
@@ -20,7 +31,7 @@ const images = [
     { src: dog5.src, alt: 'Groomed dog 5', blurDataURL: dog5.blurDataURL },
 ];
 
-export default function GalleryPreview() {
+const GalleryPreview = ({ onSelectImage }: ImagePreviewProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const startX = useRef(0);
 
@@ -64,12 +75,18 @@ export default function GalleryPreview() {
                 onTouchEnd={handleTouchEnd}
             >
                 {images.map((image, index) => (
-                    <GalleryImage
-                        key={index}
-                        src={image.src}
-                        alt={image.alt}
-                        blurDataURL={image.blurDataURL}
-                    />
+                    <div key={index} className="flex-shrink-0 w-1/3 p-2">
+                        <Image
+                            src={image.src ?? ''}
+                            alt={image.alt}
+                            placeholder="blur"
+                            blurDataURL={image.blurDataURL}
+                            width={400}
+                            height={300}
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            onClick={() => onSelectImage(image)}
+                        />
+                    </div>
                 ))}
             </div>
             <div className="flex justify-between items-center m-4">
@@ -90,4 +107,6 @@ export default function GalleryPreview() {
             </div>
         </div>
     );
-}
+};
+
+export default GalleryPreview;

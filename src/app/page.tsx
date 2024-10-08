@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { Hero } from './components/Hero';
 import Team from './components/Team';
@@ -8,6 +11,13 @@ import { StarIcon } from './assets/StarIcon';
 import { HeartIcon } from './assets/HeartIcon';
 import background from '/public/hero_background.png';
 import logo from '/public/logo.png';
+import dog1 from '/public/dog9.jpg';
+
+interface GalleryImageProps {
+    src: string;
+    alt: string;
+    blurDataURL?: string;
+}
 
 const GalleryPreview = dynamic(() => import('./components/GalleryPreview'), {
     loading: () => <Spinner />,
@@ -36,6 +46,13 @@ const cards = [
 ];
 
 const Home = () => {
+    const [selectedImage, setSelectedImage] = useState<GalleryImageProps>({
+        src: dog1.src,
+        alt: 'Groomed dog 1',
+    });
+
+    const handleSelectImage = (img: GalleryImageProps) => setSelectedImage(img);
+
     return (
         <section className="mx-auto flex flex-col">
             <Hero background={{ ...background }} logo={{ ...logo }} />
@@ -59,7 +76,7 @@ const Home = () => {
                         </div>
                     </div>
                     <Image
-                        src="/dog17.jpg"
+                        src={selectedImage.src}
                         width={400}
                         height={300}
                         className="rounded-lg shadow-lg w-full h-auto lg:w-1/3 px-4"
@@ -69,7 +86,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <GalleryPreview />
+            <GalleryPreview onSelectImage={handleSelectImage} />
             <Team />
         </section>
     );
