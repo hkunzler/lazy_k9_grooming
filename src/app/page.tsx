@@ -37,7 +37,7 @@ const cards = [
 
 const Home = () => {
     return (
-        <section className="mx-auto flex flex-col gap-32">
+        <section className="mx-auto flex flex-col">
             <Hero background={{ ...background }} logo={{ ...logo }} />
             <div className="py-16">
                 <div className="container flex flex-col justify-around mx-auto lg:flex-row items-center lg:space-x-16">

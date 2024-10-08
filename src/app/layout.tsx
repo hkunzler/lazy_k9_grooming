@@ -9,27 +9,27 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-	  <head>
+            <head>
                 {/* Preload Fonts */}
                 <link
                     rel="preload"
                     href="https://fonts.googleapis.com/css2?family=K2D:wght@400;700&display=swap"
                     as="style"
-                    onLoad="this.rel='stylesheet'"
+                    onLoad={(e) => (e.currentTarget.rel = 'stylesheet')}
                 />
                 <link
                     rel="preload"
                     href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
                     as="style"
-                    onLoad="this.rel='stylesheet'"
+                    onLoad={(e) => (e.currentTarget.rel = 'stylesheet')}
                 />
                 <link
                     rel="preload"
                     href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap"
                     as="style"
-                    onLoad="this.rel='stylesheet'"
+                    onLoad={(e) => (e.currentTarget.rel = 'stylesheet')}
                 />
-                
+
                 {/* Fallback for browsers with no JS */}
                 <noscript>
                     <link

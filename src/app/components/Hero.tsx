@@ -17,7 +17,7 @@ interface HeroProps {
 
 export const Hero = ({ heading, background, logo, className }: HeroProps) => {
     return (
-        <section className="relative h-[50vh] flex justify-center  items-center">
+        <section className="relative h-[50vh] flex justify-center  items-center mb-4 md:mb-32 lg:mb-72">
             {background && (
                 <Image
                     priority
@@ -25,18 +25,19 @@ export const Hero = ({ heading, background, logo, className }: HeroProps) => {
                     placeholder="blur"
                     blurDataURL={background.blurDataURL}
                     alt="Background image"
-		    fill
+                    layout="fill"
+                    objectFit="cover"
                     className={`absolute top-[-50%] -z-10 left-0 w-full h-[100vh] overflow-visible ${className}`}
-		    objectFit={"cover"}
                 />
             )}
             {logo && (
                 <Image
-                    priority
-                    src={logo}
+                    placeholder="blur"
+                    blurDataURL={logo.blurDataURL}
+                    src={logo.src}
                     alt="Logo"
                     fill
-                    objectFit={"contain"}
+                    objectFit={'contain'}
                 />
             )}
             {heading && (

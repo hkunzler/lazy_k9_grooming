@@ -58,8 +58,8 @@ const Gallery = () => {
     return (
         <>
             <section className="relative h-[60vh]">
-	    	<Hero heading="Lazy K9 Models" background={{...background}} />
-                          </section>
+                <Hero heading="Lazy K9 Models" background={{ ...background }} />
+            </section>
             <section className="py-16 px-4">
                 <div className="container mx-auto">
                     <Masonry

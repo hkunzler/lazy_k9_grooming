@@ -3,7 +3,7 @@ import { Hero } from '../components/Hero';
 
 const ProductInfo = () => {
     return (
-<div className="mx-auto flex flex-col text-xl  px-4 gap-4 md:gap-32 lg:gap-72">
+        <div>
             <Hero heading="Products" background={{ ...background }} />
 
             <div className="mx-auto flex flex-col text-xl  px-4 gap-32">
