@@ -1,13 +1,13 @@
 const FAQ = () => {
     return (
-        <div className="container mx-auto flex flex-col items-center lg:items-start space-y-8 lg:space-x-16 mx-auto pb-16 pt-20">
-            <h1 className="text-primary font-bold text-3xl mb-4">
+        <div className="flex flex-col items-center lg:items-start lg:space-x-16 space-y-8 mx-auto mx-auto pt-20 pb-16 container">
+            <h1 className="mb-4 font-bold text-3xl text-primary">
                 Frequently Asked Questions
             </h1>
 
             <div className="space-y-6">
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         What can I expect when I drop my dog off for an
                         appointment for the first time?
                     </h3>
@@ -25,8 +25,8 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         What do I need to do before my dog is groomed for the
                         first time?
                     </h3>
@@ -42,8 +42,8 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         Do you use kennels at your salon?
                     </h3>
                     <p>
@@ -56,15 +56,15 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         How long has Lazy K9 been open?
                     </h3>
                     <p>We opened in the summer of 2021.</p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         Do you accept all breeds of dogs?
                     </h3>
                     <p>
@@ -76,8 +76,8 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         Do you groom aggressive dogs?
                     </h3>
                     <p>
@@ -91,8 +91,8 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         Will you shave, “poodle”, or otherwise give my dog a
                         haircut that I didn’t ask for?
                     </h3>
@@ -104,8 +104,8 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         How long will my dog’s appointment take?
                     </h3>
                     <p>
@@ -116,8 +116,8 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         Can I stay with my pet while they are being groomed?
                     </h3>
                     <p>
@@ -128,8 +128,8 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         How often should my dog be groomed?
                     </h3>
                     <p>
@@ -139,8 +139,8 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         Is creative grooming (dye) safe for dogs?
                     </h3>
                     <p>
@@ -150,8 +150,8 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         Will you pluck my dog’s ear hair or squeeze their anal
                         glands?
                     </h3>
@@ -163,8 +163,8 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         Will you cut my dog’s nails?
                     </h3>
                     <p>
@@ -174,8 +174,8 @@ const FAQ = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 my-4 rounded shadow">
-                    <h3 className="font-bold text-xl mb-2 text-primary">
+                <div className="bg-gray-50 shadow my-4 p-4 rounded">
+                    <h3 className="mb-2 font-bold text-primary text-xl">
                         How much does it cost to get my dog groomed?
                     </h3>
                     <p>

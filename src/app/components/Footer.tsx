@@ -19,12 +19,12 @@ export const Footer = () => {
     ];
 
     return (
-        <footer className="bg-secondary text-white px-4 py-8">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <footer className="bg-secondary px-4 py-8 text-white">
+            <div className="gap-8 grid grid-cols-1 md:grid-cols-2 mx-auto container">
                 <div className="flex gap-16">
                     <nav>
-                        <h3 className="text-lg font-bold">Quick Links</h3>
-                        <div className="flex flex-col mt-4 space-y-2">
+                        <h3 className="font-bold text-lg">Quick Links</h3>
+                        <div className="flex flex-col space-y-2 mt-4">
                             {navLinks.map(({ href, label }) => (
                                 <Link
                                     key={href}
@@ -37,7 +37,7 @@ export const Footer = () => {
                         </div>
                     </nav>
                     <div>
-                        <h3 className="text-lg font-bold">Follow Us</h3>
+                        <h3 className="font-bold text-lg">Follow Us</h3>
                         <div className="flex space-x-4 mt-4">
                             {socialLinks.map(({ href, label, icon }) => (
                                 <Link key={href} href={href} aria-label={label}>
@@ -47,9 +47,9 @@ export const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex gap-4 flex-col lg:flex-row-reverse">
+                <div className="flex lg:flex-row-reverse flex-col gap-4">
                     <div className="min-w-48">
-                        <h3 className="text-lg font-bold">Address</h3>
+                        <h3 className="font-bold text-lg">Address</h3>
                         <p className="mt-4 text-white">
                             106 N Bent St Suite B<br />
                             Powell, WY 82435

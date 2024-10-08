@@ -67,7 +67,7 @@ const GalleryPreview = ({ onSelectImage }: ImagePreviewProps) => {
         Math.min(currentIndex, maxTransformIndex) * (100 / 3);
 
     return (
-        <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
+        <div className="relative mx-auto w-full max-w-7xl overflow-hidden">
             <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${transformPercentage}%)` }}
@@ -75,7 +75,7 @@ const GalleryPreview = ({ onSelectImage }: ImagePreviewProps) => {
                 onTouchEnd={handleTouchEnd}
             >
                 {images.map((image, index) => (
-                    <div key={index} className="flex-shrink-0 w-1/3 p-2">
+                    <div key={index} className="flex-shrink-0 p-2 w-1/3">
                         <Image
                             src={image.src ?? ''}
                             alt={image.alt}
@@ -94,7 +94,7 @@ const GalleryPreview = ({ onSelectImage }: ImagePreviewProps) => {
                     View Services
                 </SecondaryButton>
                 <GalleryDots
-                    className="sm:flex hidden items-center"
+                    className="sm:flex items-center hidden"
                     total={images.length - 2}
                     currentIndex={currentIndex}
                     onDotClick={setCurrentIndex}

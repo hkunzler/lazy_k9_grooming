@@ -5,7 +5,7 @@ const Team = () => {
         <Image
             src="/dog34.jpg"
             alt="Our Team"
-            className="w-full h-auto max-w-4xl py-32  px-4 mx-auto flex justify-center"
+            className="flex justify-center mx-auto px-4 py-32 w-full max-w-4xl h-auto"
             width={500}
             height={400}
         />

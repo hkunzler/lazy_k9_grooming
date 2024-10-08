@@ -18,7 +18,7 @@ export const InfoCard = ({
     arrow = false,
 }: InfoCardProps) => {
     return (
-        <div className="p-8 flex flex-col gap-4">
+        <div className="flex flex-col gap-4 p-8">
             <div className="w-fit">
                 {icon}
                 <h3>{title}</h3>

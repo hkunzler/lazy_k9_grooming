@@ -6,9 +6,9 @@ interface BioCardProps {
 
 export const BioCard = ({ name, title, description }: BioCardProps) => {
     return (
-        <div className="bg-gray-50 p-6 my-4 rounded shadow space-y-8 text-lg font-light">
-            <h3 className="font-bold text-2xl mb-2 text-primary">{name}</h3>
-            <p className="text-base font-semibold">{title}</p>
+        <div className="space-y-8 bg-gray-50 shadow my-4 p-6 rounded font-light text-lg">
+            <h3 className="mb-2 font-bold text-2xl text-primary">{name}</h3>
+            <p className="font-semibold text-base">{title}</p>
             {description.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
             ))}

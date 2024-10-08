@@ -8,8 +8,8 @@ const About = () => {
         <div>
             <Hero heading="Employee Bios" background={{ ...background }} />
 
-            <div className="container mx-auto px-4 lg:px-8 pt-20 pb-16">
-                <div className="grid grid-cols-1 gap-8">
+            <div className="mx-auto px-4 lg:px-8 pt-20 pb-16 container">
+                <div className="gap-8 grid grid-cols-1">
                     {bios.map((bio, index) => (
                         <BioCard
                             key={index}

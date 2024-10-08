@@ -3,7 +3,7 @@ import { ArrowIcon } from '../assets/ArrowIcon';
 
 export const PrimaryButton = ({ children }: { children: React.ReactNode }) => {
     return (
-        <button className="bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-secondary">
+        <button className="bg-primary hover:bg-secondary px-4 py-2 rounded-lg font-bold text-white">
             {children}
         </button>
     );

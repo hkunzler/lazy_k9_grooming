@@ -54,11 +54,11 @@ const Home = () => {
     const handleSelectImage = (img: GalleryImageProps) => setSelectedImage(img);
 
     return (
-        <section className="mx-auto flex flex-col">
+        <section className="flex flex-col mx-auto">
             <Hero background={{ ...background }} logo={{ ...logo }} />
             <div className="py-16">
-                <div className="container flex flex-col justify-around mx-auto lg:flex-row items-center lg:space-x-16">
-                    <div className="lg:w-1/2 p-8">
+                <div className="flex lg:flex-row flex-col justify-around items-center lg:space-x-16 mx-auto container">
+                    <div className="p-8 lg:w-1/2">
                         <h2>Luxury Dog Grooming</h2>
                         <h1>Welcome to Lazy K9 Grooming</h1>
                         <p>
@@ -69,7 +69,7 @@ const Home = () => {
                             feels their best.
                         </p>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-12">
+                        <div className="gap-16 grid grid-cols-1 md:grid-cols-2 mt-12">
                             {cards.map((card, index) => (
                                 <InfoCard key={index} {...card} />
                             ))}
@@ -79,7 +79,7 @@ const Home = () => {
                         src={selectedImage.src}
                         width={400}
                         height={300}
-                        className="rounded-lg shadow-lg w-full h-auto lg:w-1/3 px-4"
+                        className="shadow-lg px-4 rounded-lg w-full lg:w-1/3 h-auto"
                         alt="Dog Grooming"
                         sizes="100vw"
                     />

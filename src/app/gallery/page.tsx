@@ -81,23 +81,23 @@ const Gallery = () => {
             <section className="relative h-[60vh]">
                 <Hero heading="Lazy K9 Models" background={{ ...background }} />
             </section>
-            <section className="py-16 px-4">
-                <div className="container mx-auto">
+            <section className="px-4 py-16">
+                <div className="mx-auto container">
                     <Masonry
                         breakpointCols={breakpointColumnsObj}
-                        className="flex -ml-4 mx-2"
+                        className="flex mx-2 -ml-4"
                         columnClassName="pl-4"
                     >
                         {images.map((image, index) => (
                             <div
                                 key={index}
-                                className="mb-4 w-full relative"
+                                className="relative mb-4 w-full"
                                 onClick={() => openModal(image)}
                             >
                                 <Image
                                     src={image.src}
                                     alt={image.alt}
-                                    className="rounded-lg shadow-lg"
+                                    className="shadow-lg rounded-lg"
                                     width={400}
                                     height={300}
                                     sizes="100vw"

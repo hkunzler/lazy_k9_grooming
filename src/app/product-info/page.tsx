@@ -6,9 +6,9 @@ const ProductInfo = () => {
         <div>
             <Hero heading="Products" background={{ ...background }} />
 
-            <div className="mx-auto flex flex-col text-xl  px-4 gap-32">
-                <div className="container flex flex-col items-center lg:items-start space-y-8 lg:space-x-16 mx-auto pb-16 z-10">
-                    <h1 className="text-primary font-bold text-3xl mb-2">
+            <div className="flex flex-col gap-32 mx-auto px-4 text-xl">
+                <div className="z-10 flex flex-col items-center lg:items-start lg:space-x-16 space-y-8 mx-auto pb-16 container">
+                    <h1 className="mb-2 font-bold text-3xl text-primary">
                         We at Lazy K9 are committed to using the best possible
                         products for your pets.
                     </h1>
@@ -17,9 +17,9 @@ const ProductInfo = () => {
                         settled on <strong>Iv San Bernard</strong> for our
                         specialty shampoo.
                     </p>
-                    <div className="bg-gray-50 p-4 my-4 rounded shadow">
+                    <div className="bg-gray-50 shadow my-4 p-4 rounded">
                         <p className="italic">From the ISB US website:</p>
-                        <blockquote className="pl-4 border-l-4 border-primary italic">
+                        <blockquote className="border-primary pl-4 border-l-4 italic">
                             “Iv San Bernard was founded in 1995 and is the
                             leading European manufacturer of animal care
                             products from Italy. ISB produces an array of
@@ -62,9 +62,9 @@ const ProductInfo = () => {
                         We also offer an add-on deshedding treatment from{' '}
                         <strong>Madra Mor Mud</strong>.
                     </p>
-                    <div className="bg-gray-50 p-4 my-4 rounded shadow">
+                    <div className="bg-gray-50 shadow my-4 p-4 rounded">
                         <p className="italic">Madra Mor Mud “Shed Safely”</p>
-                        <blockquote className="pl-4 border-l-4 border-primary italic">
+                        <blockquote className="border-primary pl-4 border-l-4 italic">
                             “Shed Safely mud is made with fine, mineral rich
                             clay that exfoliates dry skin and promotes healing
                             and rejuvenation. Shed Safely MUD also includes

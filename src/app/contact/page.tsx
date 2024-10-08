@@ -1,14 +1,14 @@
 const Contact = () => {
     return (
-        <div className="container mx-auto flex flex-col items-center lg:items-start space-y-8 lg:space-x-16 mx-auto pb-16 pt-20">
-            <h1 className="text-primary font-bold text-3xl mb-4 text-center">
+        <div className="flex flex-col items-center lg:items-start lg:space-x-16 space-y-8 mx-auto mx-auto pt-20 pb-16 container">
+            <h1 className="mb-4 font-bold text-3xl text-center text-primary">
                 Contact Us
             </h1>
 
-            <div className="bg-gray-50 p-6 my-4 rounded shadow w-full max-w-5xl">
+            <div className="bg-gray-50 shadow my-4 p-6 rounded w-full max-w-5xl">
                 <div className="space-y-6">
                     <div>
-                        <h2 className="font-bold text-2xl mb-2 text-primary">
+                        <h2 className="mb-2 font-bold text-2xl text-primary">
                             Our Location
                         </h2>
                         <p>

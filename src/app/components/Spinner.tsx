@@ -1,7 +1,7 @@
 export const Spinner = () => {
     return (
-        <div className="flex items-center justify-center h-full">
-            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-primary"></div>
+        <div className="flex justify-center items-center h-full">
+            <div className="border-primary border-t-4 border-b-4 rounded-full w-16 h-16 animate-spin"></div>
         </div>
     );
 };

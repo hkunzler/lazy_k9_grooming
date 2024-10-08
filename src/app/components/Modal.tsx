@@ -10,10 +10,10 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, image, onClose }) => {
     if (!isOpen || !image) return null;
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-75">
+        <div className="z-50 fixed inset-0 flex justify-center items-center bg-black bg-opacity-75">
             <div className="relative">
                 <button
-                    className="absolute top-4 right-4 text-primary text-6xl"
+                    className="top-4 right-4 absolute text-6xl text-primary"
                     onClick={onClose}
                 >
                     &times;
@@ -24,7 +24,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, image, onClose }) => {
                     width={400}
                     height={300}
                     sizes="100vw"
-                    className="max-w-full max-h-[80vh] rounded-lg"
+                    className="rounded-lg max-w-full max-h-[80vh]"
                 />
             </div>
         </div>

@@ -23,11 +23,11 @@ export const Header = () => {
 
     return (
         <header>
-            <nav className="sticky top-0 z-50 w-full">
-                <div className="p-4 lg:mt-10">
-                    <div className="flex justify-end lg:justify-between items-center text-black font-black tracking-widest text-4xl">
+            <nav className="top-0 z-50 sticky w-full">
+                <div className="lg:mt-10 p-4">
+                    <div className="flex justify-end lg:justify-between items-center font-black text-4xl text-black tracking-widest">
                         {!isHomePage && (
-                            <div className="absolute left-0 top-4 ml-4 lg:ml-16">
+                            <div className="top-4 left-0 absolute ml-4 lg:ml-16">
                                 <Link href="/">
                                     <Image
                                         src={logo}
@@ -40,13 +40,13 @@ export const Header = () => {
 
                         <button
                             onClick={toggleMenu}
-                            className="lg:hidden mt-4 focus:outline-none text-black flex text-3xl"
+                            className="lg:hidden mt-4 focus:outline-none flex text-3xl text-black"
                         >
                             &#9776;
                         </button>
 
-                        <div className="hidden lg:flex items-center justify-center w-full">
-                            <div className="flex justify-center w-full pt-8 space-x-8">
+                        <div className="lg:flex justify-center items-center hidden w-full">
+                            <div className="flex justify-center space-x-8 pt-8 w-full">
                                 {navLinks.map(({ href, label }) => (
                                     <Link
                                         key={href}
@@ -66,10 +66,10 @@ export const Header = () => {
                     <div
                         className={`${isOpen ? 'fixed inset-0 bg-white' : 'hidden'} lg:hidden z-20`}
                     >
-                        <div className="flex flex-col items-center justify-center space-y-4 text-black text-3xl tracking-wide min-h-screen">
+                        <div className="flex flex-col justify-center items-center space-y-4 min-h-screen text-3xl text-black tracking-wide">
                             <button
                                 onClick={toggleMenu}
-                                className="absolute top-0 right-0 mt-8 mr-4 text-3xl"
+                                className="top-0 right-0 absolute mt-8 mr-4 text-3xl"
                             >
                                 &times;
                             </button>

@@ -17,7 +17,7 @@ interface HeroProps {
 
 export const Hero = ({ heading, background, logo, className }: HeroProps) => {
     return (
-        <section className="relative h-[50vh] flex justify-center  items-center mb-4 md:mb-32 lg:mb-72">
+        <section className="relative flex justify-center items-center mb-4 md:mb-32 lg:mb-72 h-[50vh]">
             {background && (
                 <Image
                     priority
@@ -41,7 +41,7 @@ export const Hero = ({ heading, background, logo, className }: HeroProps) => {
                 />
             )}
             {heading && (
-                <h1 className="text-black white-shadow font-bold m-8 text-8xl text-center">
+                <h1 className="white-shadow m-8 font-bold text-8xl text-black text-center">
                     {heading}
                 </h1>
             )}
