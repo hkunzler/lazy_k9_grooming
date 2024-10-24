@@ -18,6 +18,15 @@ const Contact = () => {
                         <p>Phone: (406) 597-1527</p>
                         <p>Email: contact@lazyk9grooming.com</p>
                     </div>
+                    <p>
+                        <strong>Important:</strong> The entrance to Lazy K9
+                        Grooming is{' '}
+                        <strong>
+                            accessible from the back of the building, through
+                            the alley
+                        </strong>
+                        .
+                    </p>
 
                     <div
                         className="relative w-full"

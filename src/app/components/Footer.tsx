@@ -54,6 +54,15 @@ export const Footer = () => {
                             106 N Bent St Suite B<br />
                             Powell, WY 82435
                         </p>
+                        <p className="text-white">
+                            <strong>Important:</strong> The entrance to Lazy K9
+                            Grooming is{' '}
+                            <strong>
+                                accessible from the back of the building,
+                                through the alley
+                            </strong>
+                            .
+                        </p>
                     </div>
                     <GoogleMapEmbed />
                 </div>
