@@ -32,6 +32,37 @@ export default function RootLayout({
             lang="en"
             className={`${k2d.variable} ${ptSans.variable} ${wendyOne.variable}`}
         >
+            <head>
+                <title>Lazy K9 Grooming</title>
+                <meta
+                    name="description"
+                    content="Professional grooming services for your beloved pets at Lazy K9 Grooming."
+                />
+
+                {/* Open Graph meta tags */}
+                <meta property="og:title" content="Lazy K9 Grooming" />
+                <meta
+                    property="og:description"
+                    content="Professional grooming services for your beloved pets at Lazy K9 Grooming."
+                />
+                <meta
+                    property="og:image"
+                    content="https://lazyk9grooming.com/logo.png"
+                />
+                <meta property="og:url" content="https://lazyk9grooming.com" />
+
+                {/* Twitter Card meta tags */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Lazy K9 Grooming" />
+                <meta
+                    name="twitter:description"
+                    content="Professional grooming services for your beloved pets at Lazy K9 Grooming."
+                />
+                <meta
+                    name="twitter:image"
+                    content="https://lazyk9grooming.com/logo.png"
+                />
+            </head>
             <body className="flex flex-col min-h-screen font-sans">
                 <Header />
                 <main className="flex-grow">{children}</main>
