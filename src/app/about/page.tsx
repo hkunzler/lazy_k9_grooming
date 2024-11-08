@@ -16,6 +16,8 @@ const About = () => {
                             name={bio.name}
                             title={bio.title}
                             description={bio.description}
+                            profilePic={bio.profilePic}
+                            index={index}
                         />
                     ))}
                 </div>
