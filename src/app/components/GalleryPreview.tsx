@@ -24,11 +24,31 @@ interface ImagePreviewProps {
 }
 
 const images = [
-    { src: lazy_k9__1.src, alt: 'Groomed dog 1', blurDataURL: lazy_k9__1.blurDataURL },
-    { src: lazy_k9__2.src, alt: 'Groomed dog 2', blurDataURL: lazy_k9__2.blurDataURL },
-    { src: lazy_k9__3.src, alt: 'Groomed dog 3', blurDataURL: lazy_k9__3.blurDataURL },
-    { src: lazy_k9__4.src, alt: 'Groomed dog 4', blurDataURL: lazy_k9__4.blurDataURL },
-    { src: lazy_k9__5.src, alt: 'Groomed dog 5', blurDataURL: lazy_k9__5.blurDataURL },
+    {
+        src: lazy_k9__1.src,
+        alt: 'Groomed dog 1',
+        blurDataURL: lazy_k9__1.blurDataURL,
+    },
+    {
+        src: lazy_k9__2.src,
+        alt: 'Groomed dog 2',
+        blurDataURL: lazy_k9__2.blurDataURL,
+    },
+    {
+        src: lazy_k9__3.src,
+        alt: 'Groomed dog 3',
+        blurDataURL: lazy_k9__3.blurDataURL,
+    },
+    {
+        src: lazy_k9__4.src,
+        alt: 'Groomed dog 4',
+        blurDataURL: lazy_k9__4.blurDataURL,
+    },
+    {
+        src: lazy_k9__5.src,
+        alt: 'Groomed dog 5',
+        blurDataURL: lazy_k9__5.blurDataURL,
+    },
 ];
 
 const GalleryPreview = ({ onSelectImage }: ImagePreviewProps) => {

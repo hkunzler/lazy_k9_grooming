@@ -5,11 +5,31 @@ import lazy_k9__5 from '/public/lazy_k9__37.jpg';
 import walter from '/public/walter.jpeg';
 
 const images = [
-    { src: lazy_k9__1.src, alt: 'Groomed dog 1', blurDataURL: lazy_k9__1.blurDataURL },
-    { src: lazy_k9__2.src, alt: 'Groomed dog 2', blurDataURL: lazy_k9__2.blurDataURL },
-    { src: lazy_k9__3.src, alt: 'Groomed dog 3', blurDataURL: lazy_k9__3.blurDataURL },
-    { src: lazy_k9__5.src, alt: 'Groomed dog 5', blurDataURL: lazy_k9__5.blurDataURL },
-    { src: walter.src, alt: 'Groomed dog 5', blurDataURL: walter.blurDataURL },
+    {
+        src: lazy_k9__1.src,
+        alt: 'Katy, the groomer, with two colorful groomed dogs',
+        blurDataURL: lazy_k9__1.blurDataURL,
+    },
+    {
+        src: lazy_k9__2.src,
+        alt: 'Jenny with a large dog, showcasing her role as a trainer and groomer',
+        blurDataURL: lazy_k9__2.blurDataURL,
+    },
+    {
+        src: lazy_k9__3.src,
+        alt: 'Rhianna, team member at Lazy K9 Grooming, standing confidently',
+        blurDataURL: lazy_k9__3.blurDataURL,
+    },
+    {
+        src: lazy_k9__5.src,
+        alt: 'Addie, a dog with rainbow-colored fur, waiting in the grooming area',
+        blurDataURL: lazy_k9__5.blurDataURL,
+    },
+    {
+        src: walter.src,
+        alt: 'Walter the cat, lounging on a grooming station',
+        blurDataURL: walter.blurDataURL,
+    },
 ];
 
 export const bios = [
