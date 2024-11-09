@@ -7,11 +7,11 @@ import { SecondaryButton } from './Buttons';
 import { GalleryArrow } from './GalleryArrow';
 import { GalleryDots } from './GalleryDots';
 
-import dog1 from '/public/dog9.jpg';
-import dog2 from '/public/dog16.jpg';
-import dog3 from '/public/dog13.jpg';
-import dog4 from '/public/dog9.jpg';
-import dog5 from '/public/dog10.jpg';
+import lazy_k9__1 from '/public/lazy_k9__9.jpg';
+import lazy_k9__2 from '/public/lazy_k9__16.jpg';
+import lazy_k9__3 from '/public/lazy_k9__13.jpg';
+import lazy_k9__4 from '/public/lazy_k9__9.jpg';
+import lazy_k9__5 from '/public/lazy_k9__10.jpg';
 
 interface GalleryImageProps {
     src: string;
@@ -24,11 +24,11 @@ interface ImagePreviewProps {
 }
 
 const images = [
-    { src: dog1.src, alt: 'Groomed dog 1', blurDataURL: dog1.blurDataURL },
-    { src: dog2.src, alt: 'Groomed dog 2', blurDataURL: dog2.blurDataURL },
-    { src: dog3.src, alt: 'Groomed dog 3', blurDataURL: dog3.blurDataURL },
-    { src: dog4.src, alt: 'Groomed dog 4', blurDataURL: dog4.blurDataURL },
-    { src: dog5.src, alt: 'Groomed dog 5', blurDataURL: dog5.blurDataURL },
+    { src: lazy_k9__1.src, alt: 'Groomed dog 1', blurDataURL: lazy_k9__1.blurDataURL },
+    { src: lazy_k9__2.src, alt: 'Groomed dog 2', blurDataURL: lazy_k9__2.blurDataURL },
+    { src: lazy_k9__3.src, alt: 'Groomed dog 3', blurDataURL: lazy_k9__3.blurDataURL },
+    { src: lazy_k9__4.src, alt: 'Groomed dog 4', blurDataURL: lazy_k9__4.blurDataURL },
+    { src: lazy_k9__5.src, alt: 'Groomed dog 5', blurDataURL: lazy_k9__5.blurDataURL },
 ];
 
 const GalleryPreview = ({ onSelectImage }: ImagePreviewProps) => {

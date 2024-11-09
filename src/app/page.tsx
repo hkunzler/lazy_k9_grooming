@@ -11,7 +11,7 @@ import { StarIcon } from './assets/StarIcon';
 import { HeartIcon } from './assets/HeartIcon';
 import background from '/public/hero_background.png';
 import logo from '/public/logo.png';
-import dog1 from '/public/dog9.jpg';
+import lazy_k9__1 from '/public/lazy_k9__9.jpg';
 
 interface GalleryImageProps {
     src: string;
@@ -47,7 +47,7 @@ const cards = [
 
 const Home = () => {
     const [selectedImage, setSelectedImage] = useState<GalleryImageProps>({
-        src: dog1.src,
+        src: lazy_k9__1.src,
         alt: 'Groomed dog 1',
     });
 

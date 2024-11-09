@@ -1,14 +1,17 @@
-import dog1 from '/public/dog90.jpg';
-import dog2 from '/public/dog44.jpg';
-import dog3 from '/public/dog45.jpg';
-import dog5 from '/public/dog37.jpg';
+import lazy_k9__1 from '/public/lazy_k9__90.jpg';
+import lazy_k9__2 from '/public/lazy_k9__44.jpg';
+import lazy_k9__3 from '/public/lazy_k9__45.jpg';
+import lazy_k9__5 from '/public/lazy_k9__37.jpg';
+import walter from '/public/walter.jpeg';
 
 const images = [
-    { src: dog1.src, alt: 'Groomed dog 1', blurDataURL: dog1.blurDataURL },
-    { src: dog2.src, alt: 'Groomed dog 2', blurDataURL: dog2.blurDataURL },
-    { src: dog3.src, alt: 'Groomed dog 3', blurDataURL: dog3.blurDataURL },
-    { src: dog5.src, alt: 'Groomed dog 5', blurDataURL: dog5.blurDataURL },
+    { src: lazy_k9__1.src, alt: 'Groomed dog 1', blurDataURL: lazy_k9__1.blurDataURL },
+    { src: lazy_k9__2.src, alt: 'Groomed dog 2', blurDataURL: lazy_k9__2.blurDataURL },
+    { src: lazy_k9__3.src, alt: 'Groomed dog 3', blurDataURL: lazy_k9__3.blurDataURL },
+    { src: lazy_k9__5.src, alt: 'Groomed dog 5', blurDataURL: lazy_k9__5.blurDataURL },
+    { src: walter.src, alt: 'Groomed dog 5', blurDataURL: walter.blurDataURL },
 ];
+
 export const bios = [
     {
         name: 'Kaly',
@@ -53,5 +56,6 @@ export const bios = [
             'Walter came to us in 2024 after a stint in the Park County Animal Shelter. We weren’t hiring, but he demanded an interview anyway and was very convincing. Today, Walter makes sure to greet everyone who comes through the doors (unless he is on a break), giving the groomers loud pep talks, and occasionally dashes out the door when an unsuspecting client closes it too slowly, just to keep everyone on their toes. He also is in charge of entertaining waiting clients by sitting on their laps and begging for belly rubs.',
             'When he isn’t on duty, Walter enjoys a good roll in some catnip, distracting the groomers with his cuteness, and monitoring the neighborhood through the windows.',
         ],
+        profilePic: images[4],
     },
 ];
